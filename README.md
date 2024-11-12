@@ -4,8 +4,8 @@ It creates a schedule for each task under a project plan. Each task has a name a
 
 A sample interaction in the console:
 
-How many projects do you intend to create?
-2
+How many projects do you intend to create?<br/>
+2<br/>
 What is the name of the project1?
 Randy
 How many tasks are there for this project?
