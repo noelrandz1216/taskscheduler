@@ -1,0 +1,33 @@
+# VS Code settings
+.vscode/
+
+# OS-specific files (Ubuntu/Linux)
+*~
+*.swp
+*.swo
+
+# Java dependency directories
+target/
+*.class
+
+# Maven
+.mvn/
+.mvn/wrapper/maven-wrapper.jar
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+
+# Logs and environment files
+*.log
+.env
+.env.local
+.env.*.local
+
+
+# Backup files
+*.bak
+*.old
+*.orig
