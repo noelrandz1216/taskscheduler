@@ -1,22 +1,18 @@
 package com.vits.model;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Task implements Comparable<Task>{
 
     private String name;
-    private List<Task> dependencies = new ArrayList<>();
+    private List<Task> dependencies;
     private int duration;
     private LocalDate startDate;
     private LocalDate endDate;
 
+    public Task(){}
 
-    public Task(){
-
-    }
-    
     public Task(String name, List<Task> dependencies, int duration) {
         this.name = name;
         this.dependencies = dependencies;
