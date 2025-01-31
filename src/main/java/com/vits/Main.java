@@ -19,7 +19,8 @@ public class Main {
         try(scan) {
         int numberOfProjects = getIntInput("How many projects do you intend to create?");
         for(int i=1; i<=numberOfProjects;i++){
-            ProjectPlan project = new ProjectPlan();
+            List<Task> taskList = new ArrayList<>();
+            ProjectPlan project = new ProjectPlan(taskList);
             String nameOfProject = getStringInput("What is the name of the project"+i+"?");
             project.setName(nameOfProject);
             int numberOfTasks = getIntInput("How many tasks are there for this project?");
