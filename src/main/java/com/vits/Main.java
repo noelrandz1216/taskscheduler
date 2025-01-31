@@ -3,6 +3,7 @@ package com.vits;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
@@ -18,20 +19,21 @@ public class Main {
         try(scan) {
         int numberOfProjects = getIntInput("How many projects do you intend to create?");
         for(int i=1; i<=numberOfProjects;i++){
-            ProjectPlan project = new ProjectPlan();
+            List<Task> taskList = new ArrayList<>();
+            ProjectPlan project = new ProjectPlan(taskList);
             String nameOfProject = getStringInput("What is the name of the project"+i+"?");
             project.setName(nameOfProject);
             int numberOfTasks = getIntInput("How many tasks are there for this project?");
             for(int j=1;j<=numberOfTasks;j++){
                 String name = getStringInput("Enter task name:");
                 int duration = getIntInput("Enter task duration (in days):");
-                
-                Task task = new Task(name, duration);
+                List<Task>dependencies = new ArrayList<>();
+                Task task = new Task(name, dependencies, duration);
                 project.addTask(task);
                 int numberOfDependencies=getIntInput("How many dependencies for this task?");
                 for (int k = 1; k <=numberOfDependencies; k++) {
-                    String dependencyname = getStringInput("Enter name of dependency task"+k+":");
                     Task dependency = new Task();
+                    String dependencyname = getStringInput("Enter name of dependency task"+k+":");
                     dependency.setName(dependencyname);
                     int dependencyduration = getIntInput("Duration (in days):");
                     dependency.setDuration(dependencyduration);

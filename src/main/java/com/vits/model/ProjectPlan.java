@@ -1,6 +1,5 @@
 package com.vits.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ProjectPlan {
@@ -9,8 +8,13 @@ public class ProjectPlan {
 
     private List<Task> listOfTasks;
 
-    public ProjectPlan(){
-        this.listOfTasks = new ArrayList<>();
+    public ProjectPlan(List<Task> tasklist){
+        this.listOfTasks = tasklist;
+    }
+
+    public ProjectPlan(List<Task> tasklist, String name){
+        this.listOfTasks = tasklist;
+        this.name = name;
     }
 
     public String getName() {
