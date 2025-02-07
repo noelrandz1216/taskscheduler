@@ -31,6 +31,7 @@ public class ScheduleCalculator {
         Queue<Task> queue = new LinkedList<>();
         for (Task task : sortedMap.keySet()) {
             queue.add(task);
+	    system.out.println("hi");
         }
 
         List<Task>listToReturn = new ArrayList<>();
